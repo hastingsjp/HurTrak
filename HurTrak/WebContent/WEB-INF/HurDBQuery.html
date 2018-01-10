@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- 
+Front end to ThreeParams servlet.
+
+Taken from Core Servlets and JavaServer Pages 2nd Edition
+from Prentice Hall and Sun Microsystems Press,
+http://www.coreservlets.com/.
+(C) 2003 Marty Hall; may be freely used or adapted.
+-->
+<HTML><HEAD><TITLE>Tropical Storm Database Query</TITLE></HEAD>
+<BODY BGCOLOR="#FDF5E6">
+<H1 ALIGN="CENTER">Tropical Storm Database Query</H1>
+
+<FORM ACTION="./HurTrakServlet" method = post>
+  <!--  First Parameter:  <INPUT TYPE="TEXT" NAME="param1"><BR>
+  Second Parameter: <INPUT TYPE="TEXT" NAME="param2"><BR> 
+  Third Parameter:  <INPUT TYPE="TEXT" NAME="param3"><BR> -->
+
+<TABLE>
+  <!--<TR><TD>Driver:
+      <TD><INPUT TYPE="TEXT" NAME="driver"
+                 VALUE="sun.jdbc.odbc.JdbcOdbcDriver" SIZE="35">
+  <TR><TD>URL:
+      <TD><INPUT TYPE="TEXT" NAME="url"
+                 VALUE="jdbc:odbc:Northwind" SIZE="35">
+  <TR><TD>Username:
+      <TD><INPUT TYPE="TEXT" NAME="username">
+  <TR><TD>Password:
+      <TD><INPUT TYPE="PASSWORD" NAME="password">
+  -->
+  <TR><TD VALIGN="TOP">Query:
+      <TD><TEXTAREA ROWS="5" COLS="35" NAME="query">SELECT * FROM Storms A INNER JOIN obsData B on A.id=B.id WHERE A.id = '91985';</TEXTAREA>
+  <TR><TD COLSPAN="2" ALIGN="CENTER"><INPUT TYPE="SUBMIT">
+</TABLE>
+</FORM>
+
+</BODY></HTML>
